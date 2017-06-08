@@ -95,7 +95,7 @@ class Regex
      * @param int $limit
      * @return array
      */
-    public function split(string $regex, int $limit = null): array
+    public function split(string $regex, int $limit = 0): array
     {
         return preg_split($regex, $this->getContent(), $limit);
     }
