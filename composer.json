@@ -2,7 +2,7 @@
   "name": "folour/regex",
   "description": "Simple and useful abstraction over PHP preg_* functions for PHP 7.1",
   "keywords": ["regex", "regular expressions", "regex abstraction", "PHP 7.1"],
-  "minimum-stability": "beta",
+  "minimum-stability": "stable",
   "license": "GPLv3",
   "authors": [
     {
