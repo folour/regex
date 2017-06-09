@@ -1,4 +1,8 @@
 # Regex
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/folour/regex/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/folour/regex/?branch=master)
+[![downloads](https://poser.pugx.org/folour/regex/downloads.png)](https://packagist.org/packages/folour/regex)
+[![license](https://poser.pugx.org/folour/regex/license.png)](https://packagist.org/packages/folour/regex)
+
 Simple and useful abstraction over PHP preg_* functions for PHP 7.1
 
 ### Implemented functions
