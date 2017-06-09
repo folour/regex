@@ -39,13 +39,13 @@ class Regex
      */
     public function replace(string $regex, $replacement): self
     {
-        if($replacement instanceof \Closure) {
+        if ($replacement instanceof \Closure) {
             $content = preg_replace_callback(
                 $regex, 
                 $replacement,
                 $this->getContent()
             );
-        } else if(is_string($replacement)) {
+        } else if (is_string($replacement)) {
             $content = preg_replace(
                 $regex, 
                 $replacement, 
@@ -66,7 +66,7 @@ class Regex
      */
     public function find(string $regex): array
     {
-        if(preg_match($regex, $this->getContent(), $matches)) {
+        if (preg_match($regex, $this->getContent(), $matches)) {
             return $this->rebuildMatches($matches);
         }
 
@@ -81,7 +81,7 @@ class Regex
      */
     public function findAll(string $regex): array
     {
-        if(preg_match_all($regex, $this->getContent(), $matches)) {
+        if (preg_match_all($regex, $this->getContent(), $matches)) {
             return $this->rebuildMatches($matches);
         }
 
@@ -121,18 +121,18 @@ class Regex
         $prev_key = $prev_value = null;
         $return = [];
 
-        foreach(array_slice($matches, 1) as $key => $value) {
+        foreach (array_slice($matches, 1) as $key => $value) {
             //Removing duplicates when using named capture
-            if(
-                   is_integer($key)
-                && is_string($prev_key)
-                && $prev_value === $value
+            if (
+                    is_integer($key)
+                &&  is_string($prev_key)
+                &&  $prev_value === $value
             ) {
                 continue;
             }
 
-            if(is_array($value)) {
-                foreach($value as $k => $v) {
+            if (is_array($value)) {
+                foreach ($value as $k => $v) {
                     $return[$k][$key] = ($v === '' ? null : $v);
                 }
             } else {
